@@ -1,0 +1,19 @@
+# Example configuration for the ODT dataset builder
+output_path: odt_dataset.h5
+chunk_size: [1, 64, 128, 128]
+compression: gzip
+compression_opts: 4
+report_path: report.json
+preview:
+  enabled: true
+  num_slices: 3
+  output_dir: previews
+cases:
+  - id: sample_01
+    raw: /path/to/sample_01/raw.tif
+    label: /path/to/sample_01/label.nii
+    # raw_spacing: [0.5, 0.2, 0.2]  # Optional override if metadata missing
+    # raw_direction:
+    #   - [1.0, 0.0, 0.0]
+    #   - [0.0, 1.0, 0.0]
+    #   - [0.0, 0.0, 1.0]
